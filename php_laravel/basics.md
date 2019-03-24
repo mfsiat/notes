@@ -26,3 +26,12 @@
 		@endsection
 ```
 
+7. Passing variables into a blade template. Inside the function
+```php
+		$variable = 'String goes here';
+		return view('folderName.PageName')->with('variable', $variable);
+
+		// on the blade template codes goes like this
+		<h1>{{$variable}}</h1>
+```
+8. Assests and CSS 

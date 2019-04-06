@@ -2,8 +2,10 @@
 1. To create a controller syntax:
    > php artisan make:controller "Controller Name"
 2. Controllers in laravel access the **http/request** library.
+
 3. All the new controllers extends the Controller class.
-4. To return anything from the controller we can use route. 
+
+4. To return anything from the controller we can use **Route**. 
 ```php
 	Route::get('/', 'ControllerName@Method_Name');
 ```
@@ -45,3 +47,18 @@
       php artisan migrate
 ```
    *Laravel uses the **Eloquent** ORM*
+   All the standard blog site have following CRUD functionalities:
+   >index,create,store,edit,update,show,destroy
+
+11. In modern MVC frameworks we always need to create a route. Route gives the web pages 
+   direction and etc. we need to make these web routes. with out routing we can not view 
+   the web pages. for normal pages we can create web route normally. but for controllers 
+   we can skip all these extra work by just creating a route with its behavior. 
+
+   Example code:
+   ```php
+   Route::resource('posts', 'PostsController');
+   ```
+   
+
+

@@ -40,9 +40,8 @@
    we need to create a model which will contain the database information. The tables and queries. To work with strings in database we need to import the schema library 
    on AppServiceProviders on the Providers folder. 
 
-10. Migration: to create the schemas of the database we can use 
+10. Migration: to create the schemas of the database we can use, and this code will automatically create the database schemas on the local database.   
 ```bash
       php artisan migrate
 ```
-   this code will automatically create the database schemas on the local database. 
    *Laravel uses the **Eloquent** ORM*

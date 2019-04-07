@@ -59,6 +59,9 @@
    ```php
    Route::resource('posts', 'PostsController');
    ```
+12. To fetch data from the database with eloquent:
+   > {{$post->title}}
+   > $posts = Post::orderBy('title', 'desc')->get();
    
 
 

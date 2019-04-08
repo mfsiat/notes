@@ -63,5 +63,20 @@
    > {{$post->title}}
    > $posts = Post::orderBy('title', 'desc')->get();
    
+13. We can use laravel collective for the Forms. Its no longer available on the 
+   website but can be found through the github pages. We can use it to do all things 
+   with Form controls. We can fetch the form data or store the form data with array.
+   Example: 
+   > To store data we use *Method: POST*. 
+   > To get or view data we use *Method: GET*.
+   ```php
+   // To take input 
+      $post = new Post;
+      $post->title = $request->input('title');
+      $post->save();
+   ```
+
+14. There is an interactive editor a good one out there for laravel. Its called 
+   laravel-ckeditor. We can find it on GitHub. See the git documentation for details.
 
 

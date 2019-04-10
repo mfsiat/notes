@@ -105,6 +105,7 @@
      DELETE    | posts/{post}      | posts.destroy | App\Http\Controllers\PostsController@destroy  | web          
      GET|HEAD  | posts/{post}/edit | posts.edit    | App\Http\Controllers\PostsController@edit     | web          
      GET|HEAD  | services          |               | App\Http\Controllers\PagesController@services | web          
+    
     ```
 
 

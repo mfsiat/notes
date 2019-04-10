@@ -91,9 +91,8 @@
 16. Full laravel route list
    
    $ php artisan route:list:
-   >
-    ----------- ------------------- --------------- ----------------------------------------------- --------------
-   | Method    | URI               | Name          | Action                                        | Middleware   |
+    
+     Method    | URI               | Name          | Action                                        | Middleware   
     -----------|-------------------|---------------|-----------------------------------------------|--------------|
    | GET|HEAD  | /                 |               | App\Http\Controllers\PagesController@index    | web          |
    | GET|HEAD  | about             |               | App\Http\Controllers\PagesController@about    | web          |
@@ -106,7 +105,7 @@
    | DELETE    | posts/{post}      | posts.destroy | App\Http\Controllers\PostsController@destroy  | web          |
    | GET|HEAD  | posts/{post}/edit | posts.edit    | App\Http\Controllers\PostsController@edit     | web          |
    | GET|HEAD  | services          |               | App\Http\Controllers\PagesController@services | web          |
-    -----------|-------------------|---------------|-----------------------------------------------|--------------
+    
 
 
 

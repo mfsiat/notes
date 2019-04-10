@@ -79,4 +79,33 @@
 14. There is an interactive editor a good one out there for laravel. Its called 
    laravel-ckeditor. We can find it on GitHub. See the git documentation for details.
 
+15. For forms or crud options, we always have to specify a data by it's id. we can use array to 
+   fetch the data from the database, the array contains the id. Then we need to specify an action for the observed method. 
+   ```php
+   // for edit
+   {!! Form::open(['action' => ['PostsController@update', $post->id], 'method' => 'POST']) !!}
+   // for create 
+   {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST']) !!}
+   ```
+
+16. Full laravel route list
+   
+   $ php artisan route:list
++--------+-----------+-------------------+---------------+-----------------------------------------------+--------------+
+| Domain | Method    | URI               | Name          | Action                                        | Middleware   |
++--------+-----------+-------------------+---------------+-----------------------------------------------+--------------+
+|        | GET|HEAD  | /                 |               | App\Http\Controllers\PagesController@index    | web          |
+|        | GET|HEAD  | about             |               | App\Http\Controllers\PagesController@about    | web          |
+|        | GET|HEAD  | api/user          |               | Closure                                       | api,auth:api |
+|        | GET|HEAD  | posts             | posts.index   | App\Http\Controllers\PostsController@index    | web          |
+|        | POST      | posts             | posts.store   | App\Http\Controllers\PostsController@store    | web          |
+|        | GET|HEAD  | posts/create      | posts.create  | App\Http\Controllers\PostsController@create   | web          |
+|        | GET|HEAD  | posts/{post}      | posts.show    | App\Http\Controllers\PostsController@show     | web          |
+|        | PUT|PATCH | posts/{post}      | posts.update  | App\Http\Controllers\PostsController@update   | web          |
+|        | DELETE    | posts/{post}      | posts.destroy | App\Http\Controllers\PostsController@destroy  | web          |
+|        | GET|HEAD  | posts/{post}/edit | posts.edit    | App\Http\Controllers\PostsController@edit     | web          |
+|        | GET|HEAD  | services          |               | App\Http\Controllers\PagesController@services | web          |
++--------+-----------+-------------------+---------------+-----------------------------------------------+--------------+
+
+
 

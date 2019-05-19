@@ -115,3 +115,15 @@ export default class BlinkApp extends Component {
   }
 }
 ```
+# Error handling for react native 
+
+`Unable To Load Script From Assets index.android.bundle` for this error please make sure the emulatore 
+avd is online and connected to the internet. 
+Problem–> Unable To Load Script From Assets index.android.bundle. Make sure your bundle is packaged correctly or you’re running a packaged server.
+This problem happens when we run the application using react-native run-android and it gets successfully installed in the device but either the development server has not started or if started, the installed app is unable to connect to the development server.
+
+We have tried different solutions you can try it with your own.
+Our first and the simple solution of “Unable To Load Script” problem is to check the following point
+
+1. Check whether your device is online or not?
+2. If you are running the application on the real device then the device should be on the same network where the development server is running.

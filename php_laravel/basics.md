@@ -116,7 +116,31 @@
   php artisan make:migration add_user_id_to_posts 
   ```
   this will somply create the migration file in which we can find **public up** and **public down** function in which we need to write the codes. 
-  
+
+  to add user_id 
+  ```php
+      public function up()
+    {
+        Schema::table('posts', function (Blueprint $table) {
+            $table->integer('user_id');
+        });
+    }
+  ```
+  to drop the column or user id 
+  ```php
+    public function down()
+    {
+        Schema::table('posts', function (Blueprint $table) {
+            $table->dropColumn('user_id');
+        });
+    }
+}
+  ```
+
+  after that we need to make another command that will complete the migration 
+  ```
+  php artisan migrate
+  ```
 
 
 

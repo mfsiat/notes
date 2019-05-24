@@ -108,16 +108,17 @@
     
     ```
 
-17. Migration: why do we need migration? migration means migrate somehing with something. in our blog we arre going to post out posts 
-  under a specific user id. in brief we can say that the posts author should be one specific author and that author will be 
-  specified with user id. so we are having migration and we can simply put a command to migrate as we like. it will add on the migration folder.
+17. Migration: why do we need migration? migration means migrate somehing with something. 
+   in our blog we arre going to post out posts under a specific user id. in brief we can say that 
+   the posts author should be one specific author and that author will be specified with user id. 
+   so we are having migration and we can simply put a command to migrate as we like. it will add on the migration folder.
   
   ```bash
   php artisan make:migration add_user_id_to_posts 
   ```
   
-  this will somply create the migration file in which we can find **public up** and **public down** function in which we need to write the codes.
-  to add user_id 
+   this will somply create the migration file in which we can find **public up** and **public down** function in which we need to write the codes.
+   to add user_id 
   
   ```php
       public function up()
@@ -127,7 +128,7 @@
         });
     }
   ```
-  to drop the column or user id 
+   to drop the column or user id 
   ```php
     public function down()
     {
@@ -138,13 +139,13 @@
 }
   ```
 
-  after that we need to make another command that will complete the migration 
+   after that we need to make another command that will complete the migration 
   ```
   php artisan migrate
   ```
 
-  the main soul purpose of the migration is to migrate the main table with wnother data property or in simple words to add another column we 
-  can use migration. 
+   the main soul purpose of the migration is to migrate the main table with wnother data property or in simple words to add another column we 
+   can use migration. 
 
 
 

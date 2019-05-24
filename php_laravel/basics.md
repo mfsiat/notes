@@ -115,8 +115,7 @@
   ```
   php artisan make:migration add_user_id_to_posts 
   ```
-  this will somply create the migration file in which we can find **public up** and **public down** function in which we need to write the codes. 
-
+  this will somply create the migration file in which we can find **public up** and **public down** function in which we need to write the codes.
   to add user_id 
   ```php
       public function up()

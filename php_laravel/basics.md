@@ -108,8 +108,7 @@
     
     ```
 
-17. Migration 
-  why do we need migration? migration means migrate somehing with something. in our blog we arre going to post out posts 
+17. Migration: why do we need migration? migration means migrate somehing with something. in our blog we arre going to post out posts 
   under a specific user id. in brief we can say that the posts author should be one specific author and that author will be 
   specified with user id. so we are having migration and we can simply put a command to migrate as we like. it will add on the migration folder.
   

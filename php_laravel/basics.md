@@ -90,7 +90,7 @@
 
 16. Full laravel route list
    ```php
-   $ php artisan route:list:
+   $ php artisan route:list
     
      Method    | URI               | Name          | Action                                        | Middleware   
     -----------|-------------------|---------------|-----------------------------------------------|--------------

@@ -142,5 +142,8 @@
   php artisan migrate
   ```
 
+  the main soul purpose of the migration is to migrate the main table with wnother data property or in simple words to add another column we 
+  can use migration. 
+
 
 

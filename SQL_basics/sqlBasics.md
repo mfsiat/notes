@@ -1,3 +1,3 @@
 # Sql Practice
 ## Basic Select
-![] (sqlStation.jpg)
+![](sqlStation.jpg)

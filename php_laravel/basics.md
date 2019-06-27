@@ -43,7 +43,7 @@
    on AppServiceProviders on the Providers folder. 
 
 10. Migration: to create the schemas of the database we can use, and this code will automatically create the database schemas on the local database.   
-```bash
+```php
       php artisan migrate
 ```
    *Laravel uses the **Eloquent** ORM*
@@ -113,7 +113,7 @@
    the posts author should be one specific author and that author will be specified with user id. 
    so we are having migration and we can simply put a command to migrate as we like. it will add on the migration folder.
   
-  ```bash
+  ```php
   php artisan make:migration add_user_id_to_posts 
   ```
   

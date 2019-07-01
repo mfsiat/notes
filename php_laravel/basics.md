@@ -147,5 +147,33 @@
    the main soul purpose of the migration is to migrate the main table with wnother data property or in simple words to add another column we 
    can use migration. 
 
+18. How do we use authentication in laravel? How it works? 
+```php 
+public function __construct()
+{
+  $this->middleware('auth');
+}
+```
+  this is a constructor function on the dashboard controller. Here a middleware has been included which blocks everything from going to the dashboard if the user or anything that is not authenticated. 
 
+```php
+        // Check for correct user
+        if(auth()->user()->id !== $post->user_id){
+            return redirect('/posts')->with('error', 'Unauthorized Page');
+        }
+```
+* To give post edit and delete option to the authorized user for his or her post only 
+```php
+    {{-- if the user is not authenticated then the default edit and delete option will not show --}}
+    @if (!Auth::guest()) 
+        @if (Auth::user()->id == $post->user_id)
+            <a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a>
+            
+            {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
+                {{Form::hidden('_method', 'DELETE')}}
+                {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+            {!!Form::close()!!}        
+        @endif
+    @endif
+```
 

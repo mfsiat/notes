@@ -1,7 +1,8 @@
 # Some Basics
-1. How to publish a web-page on Github-Pages:
-	> we can use gh-pages, a npm packege to publish webpages on github.
-	> first initialize npm then install gh-pages via npm.
-	> before initializing gh-pages we need to update the package.json.
-	> there we need to specify the homepage.
-	
+
+### Publish a webpage on *GitHub Pages*	
+ To publish a webpage on github pages we can simply name the repositry on this syntax __username.repoName.io__ or we can just go to the settings page and there is an option for publish our webpage on github pages. 
+
+### Git Basics:
+ To completely remove a tracked folder or file from being tracked again.
+ ![](inc/gitBasics.PNG)

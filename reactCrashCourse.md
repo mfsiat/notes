@@ -57,12 +57,30 @@ Class Post extends React.Component {
 
 ## Some important Facts
 * In **JSX** we can not use the class attribute, we need to use the **ClassName** attribute. 
-* syntax: 
+
+* syntax for class based react application  
 ```react
-render(){
-	return (
-		Code goes here
-	)
+Class AppName extends Component {
+	render(){
+		return (
+			Code goes here
+		)
+	}	
 }
+
 export default App;
 ```
+
+* syntax for **function based** application 
+
+```react 
+function AppName(){
+	return (
+		code goes here 
+	)
+}
+export default AppName;
+
+> In the latest react JS applications it is by default function based application to start with. The function based application is new on the latest build, so there could be some problems and also some conflicts with it. But we can use the class based application. There is an **extension** is VS code to convert the function based syntax to class based syntax. It's name is "**React pure to class**".
+
+* Manually if we want to declare some state than we could declare it by const variable. 

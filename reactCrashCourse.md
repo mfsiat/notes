@@ -56,4 +56,13 @@ Class Post extends React.Component {
 ```
 
 ## Some important Facts
-* 
+* In **JSX** we can not use the class attribute, we need to use the **ClassName** attribute. 
+* syntax: 
+```react
+render(){
+	return (
+		Code goes here
+	)
+}
+export default App;
+```

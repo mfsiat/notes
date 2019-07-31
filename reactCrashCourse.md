@@ -34,3 +34,24 @@ state = {
 * Comes bundled with a dev server with hot reload
 * "**npm run build**" will compile all our code to something that browser can read
 
+## Anatomy of a Component
+* This is a class based component
+* Structure::
+```react 
+Class Post extends React.Component {
+	state = {
+		title: 'Post One',
+		body: 'This is my post'
+	}
+	
+	render(){
+		return (
+			<div>
+				<h3>{ this.state.title }</h3>
+				<p>{ this.state.body }</p>
+			</div>
+		)
+	}
+}
+```
+

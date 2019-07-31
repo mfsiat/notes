@@ -16,3 +16,14 @@
 * High Order Array Methods - **forEach**, **map**, **filter**
 * Arrow Functions
 * Fetch API & Promises
+
+## React State
+* Components can have state which is an object that determines how that component renders and behaves.
+* We can also have "**application level**" state by using a state manager like Redux or Reacts own **context API**.
+```react
+state = {
+	title: 'xxx'
+	body: 'xxx'
+	isFeatured: true
+}
+```

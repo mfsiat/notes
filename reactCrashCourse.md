@@ -6,3 +6,13 @@
 * Makes front-end JavaScript much easier. 
 * Uses self contained, independent components with their own state.
 * Much more interactive UIs
+* Virtual DOM
+* JSX - Easily incorporate JS in markup
+* Easy to work with teams
+
+### It may help to learn these first
+* Classes 
+* Destructuring
+* High Order Array Methods - **forEach**, **map**, **filter**
+* Arrow Functions
+* Fetch API & Promises

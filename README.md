@@ -6,3 +6,6 @@
 ### Git Basics:
  To completely remove a tracked folder or file from being tracked again.
  ![](inc/gitBasics.PNG)
+
+ * When we have large files bigger than 100 mb which could not be uploaded via git we do: 
+ > git filter-branch --index-filter 'git rm --cached --ignore-unmatch bigfile_name'

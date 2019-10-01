@@ -10,6 +10,11 @@
 
 ### Linux commands 
 
+* To know any commands just type 
+```bash 
+man cp
+```
+
 * systemctl - this commands uses for various system purpose. 
 ```bash
 sudo systemctl status apache2
@@ -35,4 +40,7 @@ mv target_file new_file
 ```bash 
 mv targetfile target_directory
 ```
+
+* To delete a file : just rm directory/file name **beware there is no asking so there gone means gone** 
+
 

@@ -43,4 +43,7 @@ mv targetfile target_directory
 
 * To delete a file : just rm directory/file name **beware there is no asking so there gone means gone** 
 
+* To copy a directory we need to use **-R**. It mainly forces our commands. 
+
+*  
 

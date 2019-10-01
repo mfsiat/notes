@@ -45,5 +45,18 @@ mv targetfile target_directory
 
 * To copy a directory we need to use **-R**. It mainly forces our commands. 
 
-*  
+* **Find Command**: just uses the find command. there are lots of options on find
+```bash 
+# find all directories on current directory
+find . -type d 
+# find all files on current directory
+find . -type f
+# find file with a name on current directory 
+find . -type f -name "filename.txt"
+# using wild card or same name which i dont know 
+find . -type f -name "samename*"
+# -name is case sensitive so make it insensitive 
+find . -type f -iname "test*" 
+
+```  
 

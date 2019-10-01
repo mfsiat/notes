@@ -60,3 +60,7 @@ find . -type f -iname "test*"
 
 ```  
 
+* Files that are modified: We can also find this files using time limit. like files that are modified in the last hour or 10 minutes etc. 
+```bash 
+find . -type f -min -10
+```

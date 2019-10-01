@@ -11,3 +11,4 @@ select distinct city from station where mod(station.id,2)=0;
 ```sql
 select (count(city) - count(distinct city)) from station;
 ```
+

@@ -21,10 +21,10 @@ docker container run -it -p 80:80 nginx
 - To create a container 
 > docker container run -it -p 'port num:port num' 'image name'
 
-- To view all running images or containers
+- To view all running containers
 > docker ps 
 
-- To view all the images or containers 
+- To view all the containers 
 > docker ps -a 
 
 - To view the complete statistics of running containers 
@@ -33,5 +33,15 @@ docker container run -it -p 80:80 nginx
 - To **Stop** a container 
 > docker stop 'container ID'
 
+- To view all the container 
+> docker container ls -a 
+
+- To Delete a container 
+> docker container rm 'container id'
+
+- To view the downloaded images on our system
+> docker images
+
 - To delete an image 
-- docker rmi 'image id'
+> docker image rm 'image id'
+

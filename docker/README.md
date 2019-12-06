@@ -24,7 +24,7 @@ docker container run -it -p 80:80 nginx
 - To view all running containers
 > docker ps 
 
-- To view all the containers 
+- To view all the containers ( short method ) 
 > docker ps -a 
 
 - To view the complete statistics of running containers 

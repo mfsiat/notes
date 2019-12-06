@@ -15,3 +15,23 @@ docker container run -it -p 80:80 nginx
 - '-p' publish
 - '80:80' default port for our image:what is exposed from container
 - 'nginx' the image we want to create 
+
+### Commands
+
+- To create a container 
+> docker container run -it -p 'port num:port num' 'image name'
+
+- To view all running images or containers
+> docker ps 
+
+- To view all the images or containers 
+> docker ps -a 
+
+- To view the complete statistics of running containers 
+> docker stats 
+
+- To **Stop** a container 
+> docker stop 'container ID'
+
+- To delete an image 
+- docker rmi 'image id'

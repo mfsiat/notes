@@ -1,14 +1,20 @@
 ## Work with Hooks
 
+> doc on react hooks
+
 - React hooks are a combination of **state** and **LifeCycle Method**. Well in _React Hooks_ we can use both of this functionality in the same time and at the same place. 
 
 - suppose we have an app in which we need to change a name or take input. 
 
-- so what should we do? we take the name and store it somewhere. In **JS** we dont need database for this simple stuff. we can just save it on cache or whatever they say i could not remember it now. 
+- so what should we do? we take the name and store it somewhere. In **JS** we don't need database for this simple stuff. we can just save it on cache or whatever they say i could not remember it now. 
 
 - so we call the state or save them on state and change the *state* with **componentDidMount** or **LifeCycle Method** and do our work. 
 
-- but with react hooks we dont need to init them seperately we can use them both in the same place together. 
+- but with react hooks we don't need to init them separately we can use them both in the same place together. 
+
+- It allows us to use state and other features without having class. 
+
+- Now we can have a state within the functional based component with the u state hook. 
 
 ### Init 
 ```js 

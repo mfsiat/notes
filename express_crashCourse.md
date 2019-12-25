@@ -24,7 +24,7 @@
 - We can parse incoming data with the Body Parser
 
 ```js
-app.get("/", function(req, res) {
+app.get('/', function(req, res) {
   // Fetch from database
   // Load pages
   // Return JSON
@@ -36,8 +36,8 @@ app.get("/", function(req, res) {
 
 ```js
 // creating the route config
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 ```
 
@@ -45,7 +45,7 @@ app.get("/", (req, res) => {
 
 ```js
 // Set Static Folder
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, 'public')));
 ```
 
 - **By using the static folder path system we can simply just put any file on the static folder and without configure the routes we can access them**
@@ -79,11 +79,11 @@ npm install express
 
 ```js
 // Handlebar Middleware
-app.engine("handlebars", exphbs());
-app.set("view engine", "handlebars");
+app.engine('handlebars', exphbs());
+app.set('view engine', 'handlebars');
 
 // Homepage Route
-app.get("/", (req, res) => res.render("index"));
+app.get('/', (req, res) => res.render('index'));
 ```
 
 ## Extra

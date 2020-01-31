@@ -48,16 +48,34 @@
 - But the vue ui gives us more flexibility and more control of the project
 - Vue ui gives us more analytics
 
-## Building Blocks 
-- In the src folder there is a file called main.js this file contains the imports and this file is the entry point. 
+## Building Blocks
 
-- All the imports have to be placed here. 
+- In the src folder there is a file called main.js this file contains the imports and this file is the entry point.
+
+- All the imports have to be placed here.
 
 - Here we need to specify a **new instance which will call the app component inside the div or element with the id of app**.
 
-- The basic skeleton of VUE is given below. 
-```JS 
+- The basic skeleton of VUE is given below.
+
+```JS
 <template></template>
 <script></script>
 <style>
 ```
+
+- We can **pass in different types of props from one component to other**
+
+- Just Add the props inside the components tag name
+
+- Then just declare the props where we want to use it
+```js
+// Prop Declare
+<HelloWorld msg="This is being send in the HelloWorld Component">
+// Prop Output 
+<h1>{{ msg }}</h1>
+```
+
+- Remember We can put only one element inside a component. 
+
+- We can't put multiple element inside a single component.

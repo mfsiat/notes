@@ -69,39 +69,43 @@
 - Just Add the props inside the components tag name
 
 - Then just declare the props where we want to use it
+
 ```js
 // Prop Declare
 <HelloWorld msg="This is being send in the HelloWorld Component">
-// Prop Output 
+// Prop Output
 <h1>{{ msg }}</h1>
 ```
 
-- Remember We can put only one element inside a component. 
+- Remember We can put only one element inside a component.
 
 - We can't put multiple element inside a single component.
 
-## Using Props 
-> Why use props ? 
+## Using Props
+
+> Why use props ?
+
 - We use props for various reasons
-- Suppose think that we are making an app that passes data within different components 
-- So how to pass them? 
+- Suppose think that we are making an app that passes data within different components
+- So how to pass them?
 - We can declare props and use them to pass data to those components
-- We also use **template directives** to use those data to be viewed on the component. 
+- We also use **template directives** to use those data to be viewed on the component.
 
-- *Like we have an array and we need to view them on our page*.
-- So we declare the array then we need to bind it vie **v-bind** inside the template within the div or element then we can pass it to the component that we want or we can just declare the array inside the component and pass the data with a loop called **v-for** so that we can loop through the data and view them in our app. 
+- _Like we have an array and we need to view them on our page_.
+- So we declare the array then we need to bind it vie **v-bind** inside the template within the div or element then we can pass it to the component that we want or we can just declare the array inside the component and pass the data with a loop called **v-for** so that we can loop through the data and view them in our app.
 
-- Here via **v-bind** we are creating a *prop* and passing to another component. 
+- Here via **v-bind** we are creating a _prop_ and passing to another component.
 
-- Whenever we work with list in vue or react we face some eslint error. 
+- Whenever we work with list in vue or react we face some eslint error.
 
 - Because whenever we work with multiple data that works with loop
 
-- We need to specify a key to verify the data like an unique key 
+- We need to specify a key to verify the data like an unique key
 
 - That key can be the data id, here we are binding the key.
 
-- Code: 
+- Code:
+
 ```js
 <template>
   <div>

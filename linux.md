@@ -46,3 +46,23 @@ ls -la
 
 - **man** (-r) this will show some information about -r. -r is an example.
 
+
+## How to Use the _find Command 
+```bash
+# To find files in the sub directory 
+# this also finds and shows all the files on the sub directory 
+find . 
+
+# We can specify with a name 
+find JS # etc 
+
+# To find all the directories but no files 
+find . -type d
+
+# To specify Type of search we can add directories after -type 
+
+# Find only files 
+find . -type f
+
+```
+

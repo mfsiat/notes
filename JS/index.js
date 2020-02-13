@@ -116,7 +116,7 @@ class LinkedList {
         }
 
         let current = this.head;
-        let = previous;
+        let previous;
         let count = 0;
 
         // Remove first 
@@ -136,6 +136,10 @@ class LinkedList {
     }
 
     // Clear list 
+    clearList() {
+        this.head = null;
+        this.size = 0;
+    }
 
     // Print list data 
     printListData() {
@@ -157,6 +161,13 @@ ll.insertFirst(300);
 ll.insertLast(400);
 // ll.insertAt(500, 0);
 
+// remove data 
+ll.removeAt(3);
+
+// To clear the list 
+// ll.clearList();
+
+// prints the list data 
 ll.printListData();
 // ll.getAt(0);
 

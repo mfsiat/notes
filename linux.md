@@ -14,3 +14,9 @@ ls -l
 ls -la 
 
 ```
+
+- **"."** means current directory 
+
+- **".."** means parent directory 
+
+- **pwd** means the location 

@@ -46,6 +46,18 @@ ls -la
 
 - **man** (-r) this will show some information about -r. -r is an example.
 
+- To compile a cpp or c code in linux terminal just use this command
+
+```bash
+g++ main.cpp -o main
+
+# or 
+gcc main.cpp -o main
+
+# Then execute the main file by typping 
+./main
+```
+
 
 ## How to Use the _find Command 
 ```bash

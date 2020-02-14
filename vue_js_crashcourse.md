@@ -115,3 +115,10 @@
   </div>
 </template>
 ```
+
+## Emitting Event with Click Handler 
+
+- We can emit events with **@click** handlers. Give it a name and then pass the parameter. 
+```js 
+@click="$emit('del-todo', todo.id)"
+```

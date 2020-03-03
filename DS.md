@@ -1,99 +1,98 @@
-# Data Structures 
+# Data Structures
 
-> notes on data structures 
+> notes on data structures
 
-## Study 
+## Study
 
-	- Logical View.
+- Logical View.
 
-	- Operations. 
+- Operations.
 
-	- Cost of Operations. 
+- Cost of Operations.
 
-	- Implementation. 
+- Implementation.
 
-## Deffinition 
+## Deffinition
 
-	A Data Structure is a way to store and organize data in a computer, so that it can be used efficiently. 
+A Data Structure is a way to store and organize data in a computer, so that it can be used efficiently.
 
-	- We talk about Mathmatical/Logical models.
+- We talk about Mathmatical/Logical models.
 
-	- We mainly work with searching and sorting algorithms. 
+- We mainly work with searching and sorting algorithms.
 
-	- Abstract Data Type. 
-
+- Abstract Data Type.
 
 ## Abstract Data Type (ADT)
 
-	- Store a given number of elements of any type. 
+- Store a given number of elements of any type.
 
-	- Read elements by position. 
+- Read elements by position.
 
-	- Modify element at a position. 
+- Modify element at a position.
 
-	- Define data and operations but no implementation. 
+- Define data and operations but no implementation.
 
-	- We can implement this with linked list.  
+- We can implement this with linked list.
 
 ## Arrays (Concrete Implementation)
 
-	- 
+-
 
-## List as Abstract Data Type 
+## List as Abstract Data Type
 
-	It's a simple data structure. Common real world entity. **It's a collection of object of same type** we can have it as name, numbers etc. We want a list that has such properties. 
+It's a simple data structure. Common real world entity. **It's a collection of object of same type** we can have it as name, numbers etc. We want a list that has such properties.
 
-		- Empty list has size 0.
+- Empty list has size 0.
 
-		- insert
+- insert
 
-		- remove 
+- remove
 
-		- Read/modify element at a position 
+- Read/modify element at a position
 
-		- specify data-type 
+- specify data-type
 
-	We can declare such list with **Array**. So think that we want a array with data-type integer. So to declare an array we need to specify the **size** and the **end-point** of the array. Whenever we insert data into a list the data goes towards the end of the list.  
+We can declare such list with **Array**. So think that we want a array with data-type integer. So to declare an array we need to specify the **size** and the **end-point** of the array. Whenever we insert data into a list the data goes towards the end of the list.
 
 ```bash
 
-	A = [ '2', '4', '6', '7', '9']
-	
-	int a[MAXSIZE]	
-	int end = -1
+A = [ '2', '4', '6', '7', '9']
 
-	# Insert option 
-	insert(2)
-	insert(4)
-	insert(6)
-	insert(7)
-	insert(9)
-	insert(5, 2)
+int a[MAXSIZE]
+int end = -1
 
-	# Remove
-	remove(2)
-	insert(4)
-	insert(6)
+# Insert option
+insert(2)
+insert(4)
+insert(6)
+insert(7)
+insert(9)
+insert(5, 2)
 
-	# By this we can remove. 
+# Remove
+remove(2)
+insert(4)
+insert(6)
+
+# By this we can remove.
 ```
 
-	When array is full, create a new larger array. Copy the contents into the new array. Free the memory for the previous array. 
+When array is full, create a new larger array. Copy the contents into the new array. Free the memory for the previous array.
 
-	### Analysing the Cost of the operation. 
+### Analysing the Cost of the operation.
 
-		- To access: accessing through index will take **constant time** because it's an array. In array elements are arranged in one contigous block of memory, using the **start** and the **position** of the element we can access them So time complexity `bigOh(1)`. 
+- To access: accessing through index will take **constant time** because it's an array. In array elements are arranged in one contigous block of memory, using the **start** and the **position** of the element we can access them So time complexity `bigOh(1)`.
 
-		- To Insert: `T proportional to n` or `bigOh(n)`. 
+- To Insert: `T proportional to n` or `bigOh(n)`.
 
-		- To Remove: same as Inserting. 
+- To Remove: same as Inserting.
 
-		- Adding an element: `bigOh(n)`
+- Adding an element: `bigOh(n)`
 
-	### Good Thing with List 
+### Good Thing with List
 
-		- We can access in constant time 
+- We can access in constant time
 
-		- But for remove it's costly, if the list grows than it will be also costly. Sometimes a lot of the array are unused. Its not efficient in terms of memory. 
+- But for remove it's costly, if the list grows than it will be also costly. Sometimes a lot of the array are unused. Its not efficient in terms of memory.
 
-		- To utilise list as efficient and good memory usage we need to use **Linked List**. 
+- To utilise list as efficient and good memory usage we need to use **Linked List**.

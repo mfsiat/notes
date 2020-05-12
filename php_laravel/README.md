@@ -202,3 +202,8 @@ this is a constructor function on the dashboard controller. Here a middleware ha
         @endif
     @endif
 ```
+
+## Model 
+> What is model in laravel?
+
+- A model is a class that helps us communicate with the database. To create a model in laravel we can use the make command.

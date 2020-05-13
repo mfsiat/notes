@@ -207,3 +207,11 @@ this is a constructor function on the dashboard controller. Here a middleware ha
 > What is model in laravel?
 
 - A model is a class that helps us communicate with the database. To create a model in laravel we can use the make command.
+
+## Migration File 
+> What is a migration file or what does it do? 
+
+- A migration file is a file that creates the database tables. 
+
+- It also manages tables in a level application.
+

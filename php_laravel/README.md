@@ -215,3 +215,8 @@ this is a constructor function on the dashboard controller. Here a middleware ha
 
 - It also manages tables in a level application.
 
+- Migration is for database, after creating the database we can also use migration to delete or update database. 
+
+- To use migration we also need to update the **appserviceprovider.php** file. *We can find it on internet*
+
+- Refresh rollback etc commands. 

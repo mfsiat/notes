@@ -33,7 +33,7 @@ const Test = () => {
   // then fetched as the setName and it goes to the state and changes them
   return (
     <div>
-      <input onChange={event => setName(event.target.value)} />
+      <input onChange={(event) => setName(event.target.value)} />
     </div>
   );
 };

@@ -1,6 +1,6 @@
-# Redis Crash Course
+# Redis Crash Course (REmote DIctionary Server)
 
-> Doc on redis
+> Doc on redis 
 
 ## What is It?
 
@@ -78,4 +78,19 @@ llen people
 
 # pop from the list
 lpop people
+```
+
+
+## Articles Links 
+
+- [A Step by Step guide for Redis cluster in AWS](https://medium.com/@kekayan/redis-on-aws-36ed7054357e)
+- [Using Elasticache as redis as in memory key-value store](https://docs.aws.amazon.com/opsworks/latest/userguide/other-services-redis.html)
+
+
+## Trash 
+
+```bash 
+ AKIATFUNX4ATTLPXU343
+
+ N1CHRgQ79Uy08aCm6v3t2huxN9SD5nG0iLkfrafQ
 ```

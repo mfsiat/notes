@@ -30,6 +30,34 @@
 
 - caching & disk persistence
 
+## Network Security 
+
+- Deny access to main redis port 
+
+- Firewalled to prevent access 
+
+- Loopback can be used
+
+## Authentication 
+
+- Tiny layer of authentication 
+
+- Refuses all queries from unauthenticated users
+
+## Data Encryption 
+
+- Redis does not support encryption 
+
+- if redis is open to www use additional protection layer
+
+- SSL Proxy - Spiped
+
+- **Its recomeneded to disabling and renaming commands 
+
+- Specific commands can be disabled or renamed 
+
+- Commands are renamed in redis.conf
+
 ## Commands
 
 - enter redis `redis-cli`

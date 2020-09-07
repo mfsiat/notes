@@ -29,3 +29,9 @@ git clone https://github.com/s3fs-fuse/s3fs-fuse.git
 ``` 
 
 - Done
+
+## Mounting and Unmounting 
+
+- To mount a bucket use ` s3fs bucket_name mounting_point -o allow_other -o passwd_file=~/.passwds3fs `
+
+- To unmount a bucket simply use ` sudo umount mounting_point `

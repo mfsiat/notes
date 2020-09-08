@@ -87,3 +87,11 @@ sudo umount mounting_point
 - On s3 free service we can get minimum 50 Terabytes of data. I got 256 Terabyte of data on two folders each.
 
 - But remember with the request that are being sent to s3 are not unlimited. You need to keep that on mind.
+
+## Issues
+
+- The bucket access can be slow depending on your region.
+
+- Permissions have to be set manually on EBS.
+
+- [Here is the github Issue link](https://github.com/s3fs-fuse/s3fs-fuse/issues/673)

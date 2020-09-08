@@ -46,7 +46,7 @@ git clone https://github.com/s3fs-fuse/s3fs-fuse.git
 
 - Then copy them to the EC2 and save them as any file you want.
 
-- We can do it as ** `echo ACCESS_KEY:SECRET_ACCESS_KEY > PATH_TO_FILE` **
+- We can do it as **`echo ACCESS_KEY:SECRET_ACCESS_KEY > PATH_TO_FILE`**
 
 - Here give your credentials and whenever we want to mount something we need to have this file to show the `s3fs` command our key and id.
 
@@ -54,7 +54,7 @@ git clone https://github.com/s3fs-fuse/s3fs-fuse.git
 
 - Most of them are gaining access related issues. These can be easily solved by giving the EC2 explicit access to the buckets.
 
-- We can give the ** `chmod -R 777` ** or ** `chmod -R 775` ** permissions.
+- We can give the **`chmod -R 777` ** or ** `chmod -R 775`** permissions.
 
 - The permissions are mainly dependent on the use cases of our application and **bucket access**.
 

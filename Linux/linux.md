@@ -107,3 +107,55 @@ sudo apt search *-mbstring*
 - For that we use the `chmod` command and following `-R` and permission value `777` or any other value.
 
 - Use online chmod calculator to verify the proper chmod number that you want to use.
+
+## Cron Jobs
+
+- **Cron** is a utility that we can find in any Unix like Operating System.
+
+- It is used to schedule commands at a specific time.
+
+- This scheduled commands are known as **"Cron Jobs"**.
+
+- The code format is given below.
+
+```bash
+Minute(0-59) Hour(0-24) Day_of_month(1-31) Month(1-12) Day_of_week(0-6) Command_to_execute
+```
+
+![](cron-job.png)
+
+- To display the contents of the **crontab** file of the currently logged in user.
+
+```bash
+crontab -l
+```
+
+- To edit the current user's cron jobs
+
+```bash
+crontab -e
+```
+
+- If it's the first time then you will be asked to choose an editor.
+
+```bash
+Select an editor. To change later, run 'select-editor'.
+ 1. /bin/nano <---- easiest
+ 2. /usr/bin/vim.basic
+ 3. /usr/bin/vim.tiny
+ 4. /bin/ed
+
+Choose 1-4 [1]:
+```
+
+![](cronfile.png)
+
+- On this file you need to add your **cronjobs** one by one.
+
+- To remove the **cronjobs** type
+
+```bash
+crontab -r
+```
+
+- Use online cronjob generator for more details [crontab.guru](https://crontab.guru/).

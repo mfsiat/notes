@@ -54,12 +54,36 @@ git clone https://github.com/s3fs-fuse/s3fs-fuse.git
 
 - Most of them are gaining access related issues. These can be easily solved by giving the EC2 explicit access to the buckets.
 
-- We can give the **`chmod -R 777` ** or ** `chmod -R 775`** permissions.
+- We can give the **`chmod -R 777`** or **`chmod -R 775`** permissions.
 
 - The permissions are mainly dependent on the use cases of our application and **bucket access**.
 
-## Mounting and Unmounting
+## Mounting and Un-mounting
 
-- To mount a bucket use `s3fs bucket_name mounting_point -o allow_other -o passwd_file=~/.passwds3fs`
+- To mount a bucket use
 
-- To unmount a bucket simply use `sudo umount mounting_point`
+```bash
+s3fs bucket_name mounting_point -o allow_other -o passwd_file=~/.passwds3fs
+```
+
+- To unmount a bucket simply use
+
+```bash
+sudo umount mounting_point
+```
+
+## Why Use S3 and why mount a bucket on EBS
+
+- when we create the **EC2** we get 8 GB of EBS storage which mainly used as storing our apps or we can say we can store our codes there.
+
+- But when we store our objects like big files like pictures videos or something else like **static objects** then it is **beneficial** to use the simple storage service like s3 from amazon.
+
+- We can not just add a bucket on our EBS. We need to mount it on the EBS so that the EBS could recognize the mounted folder as it's own folder or ETC.
+
+- This is why we do this.
+
+- On EBS we can get 8 GB using the free tier. For more storage you need to pay and upgrade package.
+
+- On s3 free service we can get minimum 50 Terabytes of data. I got 256 Terabyte of data on two folders each.
+
+- But remember with the request that are being sent to s3 are not unlimited. You need to keep that on mind.

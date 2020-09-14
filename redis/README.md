@@ -113,7 +113,7 @@ lpop people
 
 - [A Step by Step guide for Redis cluster in AWS](https://medium.com/@kekayan/redis-on-aws-36ed7054357e)
 - [Using Elasticache as redis as in memory key-value store](https://docs.aws.amazon.com/opsworks/latest/userguide/other-services-redis.html)
-
+- [Elasticache cheat sheet](https://tutorialsdojo.com/aws-cheat-sheet-amazon-elasticache/)
 
 ## Trash 
 

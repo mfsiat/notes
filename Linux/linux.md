@@ -159,3 +159,20 @@ crontab -r
 ```
 
 - Use online cronjob generator for more details [crontab.guru](https://crontab.guru/).
+
+## Compressing in linux 
+
+- Linux has some cool compression tools like **gzip**, **tar** pre installed. 
+
+- **zip** is also installed but it's too much known to all. 
+
+- **Gzip** is the best compression for compression single files. 
+
+- If we want to create a compressed file containing multiple files then we must use **zip** or **tar** commands. 
+
+- To zip multiple files into a single file 
+```bash 
+tar -czvf file.tar.gz directory_or_file_extensions
+```
+
+

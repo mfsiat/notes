@@ -174,5 +174,8 @@ crontab -r
 ```bash 
 tar -czvf file.tar.gz directory_or_file_extensions
 ```
-
+- To unzip files 
+```bash 
+tar -xzvf file.tar.gz directory_or_file
+```
 

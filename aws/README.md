@@ -15,8 +15,13 @@
 
 ## EC2 instance 
 
-- after **VPC, Subnet, Security Groups and igw** configuration launch the EC2. 
-- 
+- EC2 instance is like a personal computer, just the difference is that it is hosted on a virtual private cloud.  
+- For free tier we get 8 GB ssd with 1 GB ram. 
+- If we need more ram than we could just increase the swap space from ssd. 
+- **Make sure to create snapshots** for the EBS, which is the ssd of ec2 storage. 
+- Before launching an EC2 make sure to create a VPC, a subnet and the firewall containing security groups which includes the internet gateway and routing table. 
+- Set **enable** for setting up automatic DNS host names. 
+
 
 ## File uplaods
 

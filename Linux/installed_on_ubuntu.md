@@ -35,7 +35,7 @@
 - updated react-scripts directories for react scripts permission
 - **Postman**
 - added mysql password ( Logic1.92 )
-
+- binwalk (tool for analyzing, reverse engineering, and extracting firmware images)
 ```bash
 sudo mysql -u root -p
 password: Logic1.92

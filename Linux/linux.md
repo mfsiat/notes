@@ -178,4 +178,30 @@ tar -czvf file.tar.gz directory_or_file_extensions
 ```bash 
 tar -xzvf file.tar.gz directory_or_file
 ```
+## Manage Process 
 
+- To manage a process we can use different commands like `top`, `toptree` etc. 
+
+- To terminate `ctrl+c` 
+
+- To quit `ctrl+d`
+
+- To stop and push it to the background `ctrl+z` 
+
+- Lists the background jobs and shows their job number `jobs` 
+
+- Shows the active background jobs `bg`
+
+- Brings a background process and uses it in foreground `fg`
+
+- To kill the process `kill`
+
+- To kill a specific process we need to provide the process number `kill %job_number`
+
+- To kill a process and terminate it abruptly `kill 9 %job_number`
+
+- Here is a detailed look 
+
+![](process_linux.png) 
+
+- For more info visit [This link](https://man7.org/linux/man-pages/man7/signal.7.html)

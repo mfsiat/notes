@@ -160,35 +160,39 @@ crontab -r
 
 - Use online cronjob generator for more details [crontab.guru](https://crontab.guru/).
 
-## Compressing in linux 
+## Compressing in linux
 
-- Linux has some cool compression tools like **gzip**, **tar** pre installed. 
+- Linux has some cool compression tools like **gzip**, **tar** pre installed.
 
-- **zip** is also installed but it's too much known to all. 
+- **zip** is also installed but it's too much known to all.
 
-- **Gzip** is the best compression for compression single files. 
+- **Gzip** is the best compression for compression single files.
 
-- If we want to create a compressed file containing multiple files then we must use **zip** or **tar** commands. 
+- If we want to create a compressed file containing multiple files then we must use **zip** or **tar** commands.
 
-- To zip multiple files into a single file 
-```bash 
+- To zip multiple files into a single file
+
+```bash
 tar -czvf file.tar.gz directory_or_file_extensions
 ```
-- To unzip files 
-```bash 
+
+- To unzip files
+
+```bash
 tar -xzvf file.tar.gz directory_or_file
 ```
-## Manage Process 
 
-- To manage a process we can use different commands like `top`, `toptree` etc. 
+## Manage Process
 
-- To terminate `ctrl+c` 
+- To manage a process we can use different commands like `top`, `toptree` etc.
+
+- To terminate `ctrl+c`
 
 - To quit `ctrl+d`
 
-- To stop and push it to the background `ctrl+z` 
+- To push it to the background `ctrl+z`
 
-- Lists the background jobs and shows their job number `jobs` 
+- Lists the background jobs and shows their job number `jobs`
 
 - Shows the active background jobs `bg`
 
@@ -200,8 +204,8 @@ tar -xzvf file.tar.gz directory_or_file
 
 - To kill a process and terminate it abruptly `kill 9 %job_number`
 
-- Here is a detailed look 
+- Here is a detailed look
 
-![](process_linux.png) 
+![](process_linux.png)
 
 - For more info visit [This link](https://man7.org/linux/man-pages/man7/signal.7.html)

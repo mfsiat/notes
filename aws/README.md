@@ -83,5 +83,5 @@
 sudo nano /etc/fstab
 /swapfile   swap    swap    sw  0   0
 ```
-- For more info check [](https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-centos-7)
+- For more info check [Click Here](https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-centos-7)
 

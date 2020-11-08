@@ -65,3 +65,23 @@
 - If we don't want to scale that much and also don't want to configure by ourselves then we could use lightsail.
 - It's not free it's paid.
 - But it's cheap. We can host our small application on it.
+
+## Increase SWAP Usage
+> when ram is low we can create and increase swap
+
+- **`Swap is not recommended on SSD`** 
+- first check whether swap on or off by typing **`swapnon -s`** 
+- `-s` states for summery. 
+- To create a standard `2GB` swap type this command **`# fallocate -l 2G /swapfile`**
+- Check for the swapfile **`ls -lh /swapfile`**
+- Change the permission **`sudo chmod 600 /swapfile`**
+- Swap is secured now make the swap file **`sudo mkswap /swapfile`**
+- Enable the swap **`sudo swapon /swapfile`**
+- Make it permanent go to fstab and add at the end 
+```bash 
+# edit and add at the bottom  
+sudo nano /etc/fstab
+/swapfile   swap    swap    sw  0   0
+```
+- For more info check [](https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-centos-7)
+

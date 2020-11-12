@@ -33,6 +33,11 @@ network.host: 0.0.0
 - If we change the **network.host** we need to add hosts too
 - So it is better on development mode we can simply just add the above lines at the bottom of the configuration file
 
+## To install plugin 
+
+- Go to this directory **`cd /usr/share/elasticsearch/bin`**
+- Type **`sudo ./elasticsearch-plugin install plugin-name`**
+
 ## Folder Directives 
 
 - Elasticsearch will be installed in `/usr/share/elasticsearch/`

@@ -43,3 +43,8 @@ network.host: 0.0.0
 - Elasticsearch will be installed in `/usr/share/elasticsearch/`
 - Configurations placed in `/etc/elasticsearch`
 - Init scripts in `/etc/init.d/elasticsearch`
+- Logs for elasticsearch `/var/log/elasticsearch`
+
+## Rersources 
+
+- Installation and full config link [Click Here](https://rharshad.com/setup-elasticsearch-cluster-aws-ec2/)

@@ -85,3 +85,13 @@ sudo nano /etc/fstab
 ```
 - For more info check [Click Here](https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-centos-7)
 
+# Mailling through postfix 
+
+- First we need to install postfix and setup a **`Mail Transport Agent`** or **`MTA`** for sending the mail.
+- Basic commands for sending mail.
+
+```bash 
+echo "test email" | mailx -s "Test email from Postfix MailServer" -r pkumar@jo-hukum.com postfixuser@jo-hukum.com
+
+echo "External Test email" | mailx -s "Postfix MailServer" -r mail@jo-hukum.com nasirul.islam@northsouth.edu
+```

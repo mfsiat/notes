@@ -14,3 +14,11 @@
 ```bash
 mongoexport --db=johukumdb --collection=johukum_mobilenumberdata --type=csv --fields=name,designation,address,store_name,numbers,categories --out=mobilenumbers.csv
 ```
+
+- Export data into csv file with specific fields.
+```bash
+mongoexport --db=johukumdb --collection=johukum_businessinfo --type=csv --fields=location[0],contact --out=businessinfo.csv
+
+mongoexport --db=johukumdb --collection=johukum_businessinfo --type=csv --fields=location.business_name,contact.title,contact.name,contact.email,contact.mobile_no,contact.landline_no,contact.fax_no,contact.website --out=jo-businessinfo.csv
+```
+

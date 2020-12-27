@@ -48,7 +48,11 @@
 - Creating a RDS instance make our app very fast and reliable.
 - It separates the load from the server on different instances, so that the machine could process codebase faster, the RDS could process query faster so that our query generation takes a small time.
 - It reduces cost.
-
+- No matter how many server we have through only one **`common DB like RDS`**, we can access from everywhere. 
+- Sample code to access RDS from server. 
+```bash
+mysql -h rds_endpoint -P 3306 -u admin -p
+```
 ## S3
 
 - S3 is a popular service from aws.

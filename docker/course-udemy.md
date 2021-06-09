@@ -32,3 +32,14 @@ docker run = docker create + docker start
   - 2nd get container id
   - 3rd get into the container with sh
     - **`docker exec -it container_id sh`**
+
+## Create a Docker image
+
+- To do this we need to create a docker file.
+
+  - Flow
+    - Specify a base image
+    - Run some commands to install dependencies
+    - Specify a command to run on container startup
+
+-

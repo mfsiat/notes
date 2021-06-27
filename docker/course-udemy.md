@@ -42,4 +42,28 @@ docker run = docker create + docker start
     - Run some commands to install dependencies
     - Specify a command to run on container startup
 
--
+- To create a docker image we need to create a Dockerfile
+
+```
+# Contents of dockerfile
+FROM alpine
+
+RUN apk add --update redis
+
+CMD ["redis-server"]
+```
+
+- Now run the command to create the docker image: **`docker build .`**
+- Now after building the image _we can create a container_ from the image: **`docker run container_id`**
+- Now we have successfully built the docker image and now we are running the docker image.
+
+## Tagging the Image
+
+- To add a name tag: **`docker build -t mfsiat/redis:latest . `**
+- Here **mfsiat/redis** is the name that we added and **latest** is the tag that we provided.
+- Here **mfsiat** is the docker id and **redis** is the container name.
+
+## Create a node app and access it from the browser
+
+- Steps
+  - create node app -> create Dockerfile -> build from Dockerfile -> run the image as container -> connect to the web app from the browser

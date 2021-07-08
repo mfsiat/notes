@@ -35,3 +35,11 @@ Max()
   - 1 to many
   - Many to 1
   - Many to many
+
+## ACID Explained
+
+> What is ACID? What ACID does in DBMS?
+
+- ACID (Atomicity Consistency Isolation Durability) together, ACID is a set of guiding principles that ensure database transactions are processed reliably. A database transaction is any operation performed within a database, such as creating a new record or updating data within one.
+
+- For more details please visit: [Click](https://www.bmc.com/blogs/acid-atomic-consistent-isolated-durable/)

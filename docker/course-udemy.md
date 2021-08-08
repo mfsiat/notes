@@ -67,3 +67,24 @@ CMD ["redis-server"]
 
 - Steps
   - create node app -> create Dockerfile -> build from Dockerfile -> run the image as container -> connect to the web app from the browser
+
+## Port Mapping
+
+- For incoming request we need to specify the port by port mapping.
+- Its a **`run time constraint`**
+- We do not setup port forwarding in dockerfile
+- To setup port mapping: **`docker run -p 8080 : 8080 <image id>`**
+
+## Enter the container by shell
+
+- **`docker run -it <container-name> sh`**
+- Another we to enter the running container: **` docker exec -it <container_id>`**
+
+## Minimize the unnecessary Build times
+
+- If we change the code base then we don't need to change the dependencies so we don't need npm install every time.
+- For that
+
+```
+
+```

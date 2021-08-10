@@ -83,8 +83,32 @@ CMD ["redis-server"]
 ## Minimize the unnecessary Build times
 
 - If we change the code base then we don't need to change the dependencies so we don't need npm install every time.
-- For that
+- We could do simply just copy the package.json file first and install it and then copy the whole directory
 
-```
+## Tag the build file
 
-```
+- For accessing the containers faster we should name them or tag them with their versions.
+
+## Docker compose
+
+- Whenever we run multiple containers and we need to connect them we can do two things
+
+  1. connect them with docker cli network features
+  2. use docker compose
+
+- Docker compose is another cli which can be used to run multiple containers
+
+- Docker compose does the same commands that are used in docker cli but in a file called **docker-compose.yml**
+
+- Run the yml file by: **`docker-compose up`**
+- Run in the background: **`docker-compose up -d`**
+- Stop containers: **`docker-compose down`**
+- Check the status of the running containers: **`docker-compose ps`**
+
+## Automatic Container restarts
+
+- Check the restart policies for docker-compose.
+
+## Docker lifecycle
+
+- A standard lifecycle for docker: **`create image > build > tag it > run the container`**

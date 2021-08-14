@@ -112,3 +112,12 @@ CMD ["redis-server"]
 ## Docker lifecycle
 
 - A standard lifecycle for docker: **`create image > build > tag it > run the container`**
+
+## Production Grade Workflow
+
+- In this situation their could be multiple docker containers. Each will have different purpose.
+- For running locally or development there could be dockerfile.dev and for production there could be just dockerfile.
+
+- To build dockerfile.dev we need to pass **`-f`** tag to forcefully build the **`Dockerfile.dev`**
+
+- Command: **`docker build -f Dockerfile.dev .`**

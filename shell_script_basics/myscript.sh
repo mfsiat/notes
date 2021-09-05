@@ -40,3 +40,17 @@ then
 else
     echo "Your name is not on the list"
 fi
+
+# CASE STATEMENT
+read -p " Are you 25 years old? Y/N " ANSWER
+case "$ANSWER" in
+    [yY] | [yY][eE][sS]) 
+        echo "You should get a job!"
+        ;;
+    [nN] | [nN][oO])
+        echo "Chill, world is not over yet!"
+        ;;
+    *)
+        echo " This is just the default statement please enter y/yes or n/no "
+        ;;
+esac

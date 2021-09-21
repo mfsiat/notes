@@ -20,7 +20,6 @@ jobs:
           import os
           print(os.environ['PATH'])
         shell: python
-jobs:
   run-windows-command:
     runs-on: windows-latest
     needs: ["run-shell-command"]

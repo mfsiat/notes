@@ -53,4 +53,66 @@ jobs:
 - **`on`** means the time the workflow will trigger.
 - **`jobs`** the work that will happen.
 - **`deploy`** means the things that will happen on the workflow.
-- 
+- On deploy block our workflow tasks, all are stated.
+- Where will the job run, how many jobs will it perform and how will it deploy all are thee inside the deploy block. 
+- The most important part is the **`uses`** part where we state that which library or action will it use.
+- The following commands will have to also follow the action that is being used. 
+
+- Example syntax
+```yml
+name: remote ssh command
+on: [push]
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script: whoami
+```
+
+- Using remote ssh commands and password
+```yml
+- name: executing remote ssh commands using password
+  uses: appleboy/ssh-action@master
+  with:
+    host: ${{ secrets.HOST }}
+    username: ${{ secrets.USERNAME }}
+    password: ${{ secrets.PASSWORD }}
+    port: ${{ secrets.PORT }}
+    script: whoami
+```
+- Using private key
+```yml
+- name: executing remote ssh commands using ssh key
+  uses: appleboy/ssh-action@master
+  with:
+    host: ${{ secrets.HOST }}
+    username: ${{ secrets.USERNAME }}
+    key: ${{ secrets.KEY }}
+    port: ${{ secrets.PORT }}
+    script: whoami
+```
+
+- Using multiple commands
+```yml
+- name: multiple command
+  uses: appleboy/ssh-action@master
+  with:
+    host: ${{ secrets.HOST }}
+    username: ${{ secrets.USERNAME }}
+    key: ${{ secrets.KEY }}
+    port: ${{ secrets.PORT }}
+    script: |
+      whoami
+      ls -al
+```
+
+- Check the link for more details [appleboy/ssh-action](https://github.com/appleboy/ssh-action)

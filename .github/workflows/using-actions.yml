@@ -1,0 +1,19 @@
+name: Use Github Actions Repo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  runs-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: list files before checkout
+        run: |
+          pwd 
+          ls -a
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: list files after checkout
+        run: |
+          pwd 
+          ls -a

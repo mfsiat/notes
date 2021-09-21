@@ -1,0 +1,14 @@
+name: Dispatch to run on windows
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-windows-command:
+    runs-on: windows-latest
+    steps:
+      - name: Directory Powershell
+        run: Get-Location
+      - name: Directory Bash
+        run: pwd
+        shell: bash

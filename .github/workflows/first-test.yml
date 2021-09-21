@@ -13,6 +13,8 @@ jobs:
         run: |
           node -v 
           npm -v
+          free -h
+          lsblk
       - name: python command
         run: |
           import os

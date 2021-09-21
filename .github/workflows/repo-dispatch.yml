@@ -1,0 +1,10 @@
+name: Trigger workflow on repository Dispatch
+on:
+  repository_dispatch:
+    types: [build]
+jobs:
+  run-sample-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: just a sample
+        run: echo "hello"

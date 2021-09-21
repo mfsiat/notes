@@ -18,13 +18,15 @@
 
 - Commit code -> Test -> Build -> Push -> Deploy
 
-## Workflow generation 
-> How the workflow triggers or runs 
+## Workflow generation
+
+> How the workflow triggers or runs
 
 - The workflow works with the yml file.
-- The yml file contains the commands and instructions to run the workflow. 
+- The yml file contains the commands and instructions to run the workflow.
 - The yml file contains all the instructions
-- Basic syntax 
+- Basic syntax
+
 ```yml
 name: Deploy
 on:
@@ -48,37 +50,39 @@ jobs:
             git clean -d -f 
             git pull https://${{ secrets.TOKEN_NAME }}:${{ secrets.TOKEN }}@github.com/mfsiat/test-cicd.git
 ```
+
 - Here is a basic yml file syntax for ssh into the server and pull the content of the repository and just deploy the content or whatever.
 - Name means **`workflow name`** a simple name.
 - **`on`** means the time the workflow will trigger.
 - **`jobs`** the work that will happen.
 - **`deploy`** means the things that will happen on the workflow.
 - On deploy block our workflow tasks, all are stated.
-- Where will the job run, how many jobs will it perform and how will it deploy all are thee inside the deploy block. 
+- Where will the job run, how many jobs will it perform and how will it deploy all are thee inside the deploy block.
 - The most important part is the **`uses`** part where we state that which library or action will it use.
-- The following commands will have to also follow the action that is being used. 
+- The following commands will have to also follow the action that is being used.
 
 - Example syntax
+
 ```yml
 name: remote ssh command
 on: [push]
 jobs:
-
   build:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - name: executing remote ssh commands using password
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
-        script: whoami
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: whoami
 ```
 
 - Using remote ssh commands and password
+
 ```yml
 - name: executing remote ssh commands using password
   uses: appleboy/ssh-action@master
@@ -89,7 +93,9 @@ jobs:
     port: ${{ secrets.PORT }}
     script: whoami
 ```
+
 - Using private key
+
 ```yml
 - name: executing remote ssh commands using ssh key
   uses: appleboy/ssh-action@master
@@ -102,6 +108,7 @@ jobs:
 ```
 
 - Using multiple commands
+
 ```yml
 - name: multiple command
   uses: appleboy/ssh-action@master
@@ -116,3 +123,36 @@ jobs:
 ```
 
 - Check the link for more details [appleboy/ssh-action](https://github.com/appleboy/ssh-action)
+
+## Trigger workflow on postman request
+
+- We can also trigger a github actions workflow using postman post request.
+- To setup we just need to add the trigger event on **`repository_dispatch`**.
+- Sample code:
+
+```yml
+name: Trigger workflow on repository Dispatch
+on:
+  repository_dispatch:
+    types: [build]
+jobs:
+  run-sample-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: just a sample
+        run: echo "hello"
+```
+
+- Postman post url: **`https://api.github.com/repos/mfsiat/notes/dispatches`**
+- Body
+
+```json
+{
+  "event_type": "build"
+}
+```
+
+- 2 Headers ->
+  - Accept -> **`application/vnd.github.everest-preview+json`**
+  - Content-Type -> **`application/json`**
+  - We need to add a token as Bearer Token.

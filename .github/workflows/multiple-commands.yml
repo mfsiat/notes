@@ -1,0 +1,32 @@
+name: Run multiple jobs with single workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        run: echo "Hello World"
+      - name: multiline script
+        run: |
+          node -v 
+          npm -v
+          free -h
+          lsblk
+      - name: python command
+        run: |
+          import os
+          print(os.environ['PATH'])
+        shell: python
+jobs:
+  run-windows-command:
+    runs-on: windows-latest
+    needs: ["run-shell-command"]
+    steps:
+      - name: Directory Powershell
+        run: Get-Location
+      - name: Directory Bash
+        run: pwd
+        shell: bash

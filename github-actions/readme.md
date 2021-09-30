@@ -156,3 +156,6 @@ jobs:
   - Accept -> **`application/vnd.github.everest-preview+json`**
   - Content-Type -> **`application/json`**
   - We need to add a token as Bearer Token.
+
+- It is always a best practice to add all the **ip**, **username**, **password**, **keys** or any secret to github secrets. 
+- And after that you can add those secrets on the appropriate field with ${{secrets.YOUR_SECRET_VALUE_NAME}}.

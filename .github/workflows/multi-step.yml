@@ -28,7 +28,7 @@ jobs:
   run-deploy-command:
     runs-on: ubuntu-latest
     needs: ["run-test-command"]
-      steps:
+    steps:
         - name: Sample Deploy Command
           run: echo "Build the app"
         - name: Deploy on Prod

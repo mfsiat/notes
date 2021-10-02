@@ -9,7 +9,6 @@ jobs:
     steps:
       - name: echo a string
         run: echo "Hello World"
-    steps:
       - name: multiline script
         run: |
           node -v 
@@ -29,10 +28,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: ["run-test-command"]
     steps:
-        - name: Sample Deploy Command
-          run: echo "Build the app"
-        - name: Deploy on Prod
-          run: |
-            pwd
-            sudo apt install screenfetch -y
-            screenfetch
+      - name: Sample Deploy Command
+        run: echo "Build the app"
+      - name: Deploy on Prod
+        run: |
+          pwd
+          sudo apt install screenfetch -y
+          screenfetch

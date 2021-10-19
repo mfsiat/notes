@@ -7,6 +7,11 @@
 - For 1 - 4: **`https://github.com/alialaa/github-actions-course`**
 - For rest: **`https://github.com/alialaa/github-actions-course-react`**
 
+## Resource 
+
+- Encrypting & Decrypting Files [Github Documentation](https://docs.github.com/en/actions/security-guides/encrypted-secrets)
+- Context [Github Docs](https://docs.github.com/en/actions/learn-github-actions/contexts)
+
 ## What is Github Actions
 
 - Its a platform to automate developer workflows

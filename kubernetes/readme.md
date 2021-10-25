@@ -22,4 +22,77 @@
   - to install minikube go [here](https://minikube.sigs.k8s.io/docs/start/)
 
 - to verify kubectl installation run **`kubectl version --client`**
--
+- After installing minikube we need to install kubectl separately. 
+
+
+## Kubernetes Architecture
+
+- It has a master node and some worker nodes. 
+- The number of worker nodes can be defined by us. 
+
+### Master Node
+  - **API server**:
+      We communicate the server with **api** via the **kubectl**.
+  - **etcd**:
+      Act as a cluster datastore, it provides high available key value store for persisting cluster state. It will sync data for all the master nodes.
+  - **Kube Controller Manager**: 
+      It watches the state of the cluster through API server & does as necessary for keeping the cluster on desired state. 
+        - It four component
+          1. Node Controller
+          2. Replication Controller
+          3. Endpoints Controller 
+          4. Service Account & Token controller
+  - **Kube Cloud Manager**: 
+      It is a k8s control panel which manages cloud-specific control logic.
+  - **Kube Scheduler**:
+      It schedules the newly created pods to nodes with enough space to satisfy the pods resources needs.
+
+### Worker Node
+  - **Kubelet**:
+      It runs on every node and reports everything to the **api server**, it ensures the health & monitors the pods. It act as intermediate between **kube api server** & **CRI** ( container runtime interface ). It is a service not a pod.
+  - **Kubeproxy**:
+      Handles the network and available everywhere.
+  - **CRI**:
+      To launch the containers on the nodes it is used. It is mainly docker but k8s supports other services too.
+
+
+## Deploy pods using yml file
+
+- To run something with kubernetes we need to create pods for our application. 
+- It means that on kubernetes our applications will be called pods instead of applications and will be run on specific docker images. 
+- For this we need to make sure that we create docker images for our applications and push them to docker hub or any kind of container hubs. 
+- We should always remember that k8s is a **container orchestration system** so whatever we do it should contain docker.
+
+### To create the pods 
+- We need to create a yml file containing the instruction for our pods. 
+- Sample yml file
+```yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myFirstpod
+  labels:
+    app: flask
+spec:
+  containers:
+    - name: myFirstpod
+      image: mfsiat/devops-test
+```
+- **Make sure minikube or kubernetes is running**
+- To create the pod run the below commands
+```bash
+kubectl create -f pods.yml
+```
+- To get the list of available pods
+```bash
+kubectl get pods
+```
+- To get the list of all pods
+```bash
+kubectl get pods -A
+```
+
+## Common Kubernetes Errors
+
+- **CrashLoopBackOff**: 
+        It means that our pod starts, crashes and restarts again. To prevent this error make sure that the docker image that you have provided is valid and it is in good state.

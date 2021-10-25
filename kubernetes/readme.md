@@ -92,6 +92,76 @@ kubectl get pods
 kubectl get pods -A
 ```
 
+### Creating Replication
+
+- Two way we can create replica set. 
+  1 - replica controller 
+  2 - replica set
+- Difference is the **selector label**
+- Replication is for creating a backup for the pods, because when a pod gets deleted than with the replication set instruction k8s should launch new pods. 
+- To do this create a file name **replica.yml** and add the below instructions. 
+```yml
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myfirstpod
+  labels:
+    app: flask
+spec:
+  template: 
+    metadata:
+      name: myfirstpod
+      labels:
+        app: flask
+    spec:
+      containers:
+        - name: myfirstpod
+          image: mfsiat/devops-test
+  replicas: 3
+  selector:
+    matchLabels:
+      app: flask
+```
+- Create the replica pods using the below command
+```bash
+kubectl create -f replica.yml
+```
+- Check the replica sets
+```
+kubectl get rs
+```
+- Check the pods 
+```bash
+kubectl get pods
+```
+
+
+### Creating Deployment configs
+
+- There should be another config named deployment which will run as a production build and always keeps updated to prevent the rollout.
+- Sample deployment yml config
+```yml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myfirstpod
+  labels:
+    app: flask
+spec:
+  template: 
+    metadata:
+      name: myfirstpod
+      labels:
+        app: flask
+    spec:
+      containers:
+        - name: myfirstpod
+          image: mfsiat/devops-test
+  replicas: 4
+  selector:
+    matchLabels:
+      app: flask
+```
 ## Common Kubernetes Errors
 
 - **CrashLoopBackOff**: 

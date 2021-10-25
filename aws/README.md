@@ -89,7 +89,7 @@ sudo nano /etc/fstab
 ```
 - For more info check [Click Here](https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-centos-7)
 
-# Mailling through postfix 
+## Mailling through postfix 
 
 - First we need to install postfix and setup a **`Mail Transport Agent`** or **`MTA`** for sending the mail.
 - Basic commands for sending mail.
@@ -98,4 +98,66 @@ sudo nano /etc/fstab
 echo "test email" | mailx -s "Test email from Postfix MailServer" -r pkumar@jo-hukum.com postfixuser@jo-hukum.com
 
 echo "External Test email" | mailx -s "Postfix MailServer" -r mail@jo-hukum.com nasirul.islam@northsouth.edu
+```
+
+## Cloudwatch 
+> Cloudwatch is a very useful service for monitoring application & server logs
+
+- To setup the cloudwatch the cloudwatch agent should be installed on the server with a specific **IAM** role which is given below.
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "autoscaling:Describe*",
+                "cloudwatch:*",
+                "logs:*",
+                "sns:*",
+                "iam:GetPolicy",
+                "iam:GetPolicyVersion",
+                "iam:GetRole"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "iam:CreateServiceLinkedRole",
+            "Resource": "arn:aws:iam::*:role/aws-service-role/events.amazonaws.com/AWSServiceRoleForCloudWatchEvents*",
+            "Condition": {
+                "StringLike": {
+                    "iam:AWSServiceName": "events.amazonaws.com"
+                }
+            }
+        }
+    ]
+}
+```
+- Download and installed the **cloudwatch agent** and configure the **amazon-cloudwatch-agent.json** file on the directory named **/opt/aws/amazon-cloudwatch-agent/etc** with the following schema. 
+```
+{
+    "agent": {
+        "run_as_user": "root",
+        "metrics_collection_interval": 2,
+    },
+    "logs": {
+        "logs_collected": {
+            "files": {
+                "collect_list": [
+                    {
+                        "file_path": "/var/log/apache2/admin.phototexincorporate.com_access.*",
+                        "log_group_name": "wordpress-server",
+                        "log_stream_name": "phototexincorporate/apache2/access/logs",
+                    },
+                    {
+                        "file_path": "/var/www/html/salepro-phototex/storage/logs/laravel.*",
+                        "log_group_name": "wordpress-server",
+                        "log_stream_name": "phototextincorporate/laravel/logs",
+                    }
+                ]
+            }
+       }
+   }
+}
 ```

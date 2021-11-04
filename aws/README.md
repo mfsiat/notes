@@ -161,3 +161,12 @@ echo "External Test email" | mailx -s "Postfix MailServer" -r mail@jo-hukum.com 
    }
 }
 ```
+- For more info check [Click Here](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AgentSetup.html)
+
+- For installing cloudwatch agent on amazon linux 2 we need to install the **`amazon-cloudwatch-agent`** package.
+
+- To run the agent press **`sudo systemctl start amazon-cloudwatch-agent`**.
+
+- For installing agent on amazon linux install the agent with **`sudo yum install amazon-cloudwatch-agent`**.
+
+- To run it type **`sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -s -c file:/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.d/file_config.json`**

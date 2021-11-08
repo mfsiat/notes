@@ -35,3 +35,13 @@
 ```
 > grant select on database_name.table_name to 'username'@'localhost';
 ```
+- Some notes 
+```
+ UPDATE mysql.user SET user='newusername',
+ password=PASSWORD('newpassword') WHERE user='root';
+ FLUSH PRIVILEGES;
+```
+```
+CREATE USER 'username'@'%' IDENTIFIED BY 'password';
+GRANT SELECT ON *.* TO 'username'@'%';
+```

@@ -15,3 +15,23 @@
 
 - To view a table
 > show tables;
+
+## DB Administering
+> create user, set password & assign specific tables
+
+- To create a db user 
+```
+> create user 'username'@'localhost' identified by 'password';
+```
+- To set a password
+```
+> set password for 'username'@'localhost' = password;
+```
+- To assign a table with all access 
+```
+> grant all on database_name.* to 'username'@'localhost';
+```
+- To assign a table with specific access
+```
+> grant select on database_name.table_name to 'username'@'localhost';
+```

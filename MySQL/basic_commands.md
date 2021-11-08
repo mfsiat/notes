@@ -45,3 +45,10 @@
 CREATE USER 'username'@'%' IDENTIFIED BY 'password';
 GRANT SELECT ON *.* TO 'username'@'%';
 ```
+
+- Some Docs
+https://dev.mysql.com/doc/refman/5.7/en/grant.html
+https://kodejava.org/how-to-create-a-read-only-mysql-user/
+https://techleader.pro/a/388-Adding-a-read-only-MySQL-user
+https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql
+https://www.mysqltutorial.org/mysql-drop-user/

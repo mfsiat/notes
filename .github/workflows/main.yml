@@ -3,10 +3,10 @@ name: Housekeeping
 on:
   push:
     branches:
-      - main # Modify if you use a different main branch name, such as the legacy "master" name.
+      - master # Modify if you use a different main branch name, such as the legacy "master" name.
   pull_request:
     branches:
-      - main # Modify if you use a different main branch name, such as the legacy "master" name.
+      - master # Modify if you use a different main branch name, such as the legacy "master" name.
 
 jobs:
   linting:

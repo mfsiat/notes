@@ -50,3 +50,11 @@ db.createUser(
 )
 ```
 
+## View all the information of the db
+
+- Type this command
+```
+db.adminCommand('listDatabases').databases.forEach(function(d) {
+    printjson(db.getSiblingDB(d.name).stats());
+})
+```

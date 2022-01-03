@@ -55,3 +55,18 @@ docker container run -it -p 80:80 nginx
 
 - To delete an image
   > docker image rm 'image id'
+
+
+### Build Docker Container from Dockerfile
+
+- To build image from a **Dockerfile** & tag it 
+  > docker build -t image_name . 
+
+- To run the build & tagged image 
+  > docker run -dp 8000:8000 image_name
+
+- To add 3rd party flag with docker 
+  > docker run -dp 8000:8000 --cap-add ANY_TYPE_OF_FLAG image_name
+
+- To add specific env file with the image and run it with docker-compose
+  > docker-compose --env-file docker.env up -d

@@ -211,3 +211,28 @@ jobs:
         DB_DATABASE: database/database.sqlite
       run: vendor/bin/phpunit
 ```
+
+## Deploy on Cpanel 
+
+- Sample workflow to deploy on cpanel 
+```
+name: Publish Website to Web Hosting
+on:
+  push:
+    branches:
+      - main
+jobs:
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2.1.0
+      with:
+        fetch-depth: 2
+    - name: FTP-Deploy-Action
+      uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      with:
+        ftp-server: ${{ secrets.FTP_SERVER }}
+        ftp-username: ${{ secrets.FTP_USERNAME }}
+        ftp-password: ${{ secrets.FTP_PASSWORD }}
+```

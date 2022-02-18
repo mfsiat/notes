@@ -29,3 +29,18 @@
         3. Internet layer 
         4. Network Access layer 
     - Difference between OSI and TCP/IP model link: [click here](https://community.fs.com/blog/tcpip-vs-osi-whats-the-difference-between-the-two-models.html)
+
+- Uber Fullfilment platform rearchitecture: [link](https://eng.uber.com/building-ubers-fulfillment-platform/)
+    - How uber scale to millions of concurrent requests? Uber uses **`GCP Spanner`** to handle this request. Cloud spanner is a managed relational database that is highly scable with strong consistency. 
+    - Ubers line of business is powered by it's fulfillment platform. It is the backbone of Uber's architecture. The platform can handle millions of concurrent users and billions of trips per year. That means billions of database transactions per day.
+    - Uber stores all of its order information in Google Cloud Spanner for its scalability & consistency. 
+    - Previously they have used an on-prem database ( Cassandra ). However, as the Uber ecosystem grew, they had problems with the eventual consistency model of Cassandra, resulting in data inconsistencies. 
+    - Also, Uber uses a Hybrid cloud network architecture that has less latency across services by design. 
+    - It took them **`six months to migrate from the old database stack to the new one`**. They migrated from on-prem data to spanner without impacting live users. 
+    - Following are the migration challenges faced by Uber
+        - How to test at Uber scale 
+        - Performance * cost optimization 
+        - Capacity planning 
+        - Live migration * Zero downtime. 
+        - Observability, alerting, data protection strategy & incident management
+    - 

@@ -46,3 +46,8 @@ location / {
 }
 ```
 - only **proxy_pass** can be enough
+
+## Automatically generate Nginx Configs using DigitalOcean Tool
+
+- This tools provides auto generation for nginx configs
+- URL: [Click Here](https://www.digitalocean.com/community/tools/nginx)

@@ -51,3 +51,14 @@ location / {
 
 - This tools provides auto generation for nginx configs
 - URL: [Click Here](https://www.digitalocean.com/community/tools/nginx)
+
+## Catch real ip from user access
+
+- This works behind load balancer and saves the ip in nginx access log
+- Nginx can catch real ip under load balancer, this is risky but quite handful 
+- ServerFault Link: [Click Here](https://serverfault.com/questions/331531/nginx-set-real-ip-from-aws-elb-load-balancer-address)
+- Add the following config on main **`nginx.conf`**
+```
+	real_ip_header X-Forwarded-For;
+	set_real_ip_from 10.10.0.0/16;
+```

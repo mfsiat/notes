@@ -5,7 +5,7 @@
 
 ## Info
 
-- GitHub Link: [https://github.com/mrjgreen/db-sync](Click Here)
+- GitHub Link: [Click Here](https://github.com/mrjgreen/db-sync)
 
 ## How to Use
 

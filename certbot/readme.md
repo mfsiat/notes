@@ -13,3 +13,4 @@
 - Setup on ubuntu for apache: **`sudo apt install certbot python3-certbot-apache`**
 - To run certbot type: **`sudo certbot --nginx`** for nginx and for apache2: **`sudo certbot --apache`**
 - To run certbot without providing email type: **`sudo certbot --nginx -d example.com --register-unsafely-without-email`**
+- To run without email and one command type: **`certbot run -n --nginx --agree-tos -d www.example.com -m --redirect`**

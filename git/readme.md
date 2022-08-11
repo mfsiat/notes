@@ -49,3 +49,10 @@ git clone --recurse-submodules repo_link
 - By author --author
 - By file -- <filename> 
 - By branch -- <branch-A>
+
+## Take a Backup of untracked files 
+- Follow the snippets
+```
+git ls-files --others --exclude-standard -z |\
+xargs -0 tar rvf ~/backup-untracked.tar.gz
+```

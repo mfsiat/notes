@@ -61,3 +61,11 @@ select name, price, unit_sold, price * unit_sold as revenew from mobile order by
 
 - These are used as operators and functions. 
 ![string_operators_functions](db2.png)
+
+### Show the running Query 
+```
+select query, query_start from pg_stat_activity
+where username='db_user'
+and client_addr='db_user_ip'
+order by query_start desc
+```

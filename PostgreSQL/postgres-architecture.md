@@ -8,7 +8,9 @@ This is confusing but can be described.
 
 - Everything is postgres is process based not thread based. This is for stability. Threads cannot ensure stability. Now threads are stable and also lighterwieght.
 
--  
+- In Postgres every connection gets a brand new process. Which is being handled by **max_connection**.
+
+- 
 
 
 
